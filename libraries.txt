@@ -1,0 +1,9 @@
+# Wokwi Library List
+# See https://docs.wokwi.com/guides/libraries
+
+DHT22
+Adafruit SSD1306
+Adafruit GFX Library
+RTClib
+EEPROM-Storage
+DHT sensor library

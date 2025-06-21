@@ -1,53 +1,109 @@
-# Advanced-Home-Automation
-Project Description: Home Automation System with Environmental Sensing
-Overview:
-This project is a comprehensive home automation system designed and simulated using the Wokwi platform. It leverages an ESP32 microcontroller to monitor and control environmental conditions within a smart home setup. The system integrates temperature and humidity sensing (DHT22), light intensity detection (LDR), motion detection (PIR sensor), and real-time clock functionality (RTC DS1307). Outputs include automated control of lighting and fan relays, as well as a status LED indicator and an OLED display for real-time feedback1.
+🏠 Advanced Home Automation System with Environmental Sensing
+A Smart Home Project using ESP32 on Wokwi
 
-Project Objectives:
+📘 Overview
+Welcome to the Advanced Home Automation system—a smart, sensor-driven home controller designed and simulated on the Wokwi platform! 🚀
+Powered by the ESP32, this system integrates real-time sensing and automation to enhance comfort, energy efficiency, and user control.
 
-Automate the control of home lighting and fans based on environmental conditions and occupancy.
+🎯 Project Objectives
+⚡ Automate lighting and fan control based on temperature, light intensity, and occupancy.
 
-Enhance energy efficiency by activating devices only when necessary (e.g., turning on lights when it’s dark and someone is present, or activating the fan when temperature exceeds a set threshold and motion is detected).
+🌱 Improve energy efficiency by running appliances only when needed.
 
-Provide real-time environmental data and system status to users via an OLED display.
+🖥️ Display real-time data like time, temperature, humidity, and sensor status on an OLED screen.
 
-Allow users to adjust temperature and light thresholds dynamically through serial commands, with persistent storage using EEPROM1.
+🛠️ Allow user-defined thresholds via the Serial Monitor with EEPROM-based persistence.
 
-Key Features:
+🧠 Key Features
+🔍 Sensors
+🌡️ DHT22: Measures temperature and humidity.
 
-Sensors:
+💡 LDR (Light Dependent Resistor): Detects ambient light levels (analog + digital output).
 
-DHT22: Measures ambient temperature and humidity.
+🚶 PIR Sensor: Senses motion (human presence).
 
-LDR (Light Dependent Resistor): Monitors ambient light levels, both analog and digital outputs.
+⏰ RTC DS1307: Keeps accurate time, even during resets.
 
-PIR Sensor: Detects human motion.
+⚙️ Actuators
+💡 Relay for Light: Turns on lights if it’s dark and someone is present.
 
-RTC DS1307: Maintains accurate time for time-stamped data display.
+🌬️ Relay for Fan: Activates fan if temperature > threshold and motion is detected.
 
-Actuators:
+🔴 Status LED: Glows when low-light is detected (via LDR digital output).
 
-Relay for Light: Automatically switches lighting based on light level and motion.
+🖥️ User Interface
+📟 OLED Display:
+Shows:
 
-Relay for Fan: Activates fan when temperature exceeds user-defined threshold and motion is detected.
+⏱️ Current Time
 
-Status LED: Indicates low light conditions via the LDR’s digital output.
+🌡️ Temperature & 💧 Humidity
 
-User Interface:
+💡 Light Level
 
-OLED Display: Shows current time, temperature, humidity, light levels, and motion status.
+🚶 Motion Detection Status
 
-Serial Interface: Users can update temperature and light thresholds, which are saved in EEPROM for persistence across resets.
+🧑‍💻 Serial Interface:
 
-System Logic:
+🛠️ Set custom thresholds for temperature & light.
 
-Lights are turned on only if the room is dark (below the light threshold) and motion is detected.
+💾 Saves settings in EEPROM for persistence across resets.
 
-The fan is activated when the temperature exceeds the set threshold and motion is detected, ensuring comfort only when the room is occupied.
+🧠 System Logic
+💡 Lights turn on only when:
 
-The status LED provides a quick visual cue for low-light conditions.
+Light level is below threshold
 
-The OLED display gives a comprehensive snapshot of all sensor readings and system status in real time1.
+Motion is detected
 
-Applications:
-This system is ideal for smart home enthusiasts, students, or engineers seeking to explore automation, IoT, and embedded systems. It demonstrates practical integration of multiple sensors and actuators, real-time data display, and persistent configuration—all within a simulated environment.
+🌬️ Fan turns on when:
+
+Temperature is above threshold
+
+Motion is detected
+
+🔴 LED glows when light is below threshold (LDR digital LOW)
+
+📟 OLED shows a live snapshot of:
+
+Sensor readings
+
+System status
+
+Current time (RTC-based)
+
+💡 Applications
+This project is perfect for:
+
+🏠 Smart home enthusiasts
+
+🎓 Students exploring IoT & embedded systems
+
+👨‍🔧 Engineers designing intelligent automation systems
+
+It demonstrates:
+
+🌐 IoT integration
+
+🧩 Sensor-actuator fusion
+
+💾 EEPROM storage
+
+📟 Real-time data display
+All simulated efficiently using Wokwi!
+
+🔧 Technologies Used
+🧠 ESP32 Microcontroller
+
+🧪 DHT22, PIR, LDR
+
+⏰ RTC DS1307
+
+📟 SSD1306 OLED
+
+💬 EEPROM & Serial Monitor
+
+🧪 Wokwi Simulator
+
+🚀 Demo & Simulation
+🧪 Click here to run the simulation on Wokwi https://wokwi.com/projects/433739825455756289

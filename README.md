@@ -133,17 +133,5 @@ Demonstrates:
 ## 🧪 Demo & Simulation
 
 🎮 **Try it Live on Wokwi**:
-🔗 [Click here to open the simulation](https://wokwi.com/projects/433739825455756289)
+https://wokwi.com/projects/433739825455756289
 
----
-
-## 📁 Repository Structure
-
-```
-Advanced-Home-Automation/
-├── AdvancedHomeAutomation.ino     # Arduino sketch
-├── README.md                      # Project description
-└── media/                         # Optional images/screenshots
-```
-
----

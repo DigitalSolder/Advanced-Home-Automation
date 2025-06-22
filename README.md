@@ -1,109 +1,149 @@
-🏠 Advanced Home Automation System with Environmental Sensing
-A Smart Home Project using ESP32 on Wokwi
+🌟 **Advanced Home Automation System with Environmental Sensing** project:
 
-📘 Overview
-Welcome to the Advanced Home Automation system—a smart, sensor-driven home controller designed and simulated on the Wokwi platform! 🚀
-Powered by the ESP32, this system integrates real-time sensing and automation to enhance comfort, energy efficiency, and user control.
+---
 
-🎯 Project Objectives
-⚡ Automate lighting and fan control based on temperature, light intensity, and occupancy.
+# 🏠 Advanced Home Automation System with Environmental Sensing
 
-🌱 Improve energy efficiency by running appliances only when needed.
+**A Smart Home Project using ESP32, OLED Display, and Multiple Sensors (Simulated on Wokwi)**
 
-🖥️ Display real-time data like time, temperature, humidity, and sensor status on an OLED screen.
+---
 
-🛠️ Allow user-defined thresholds via the Serial Monitor with EEPROM-based persistence.
+## 📘 Overview
 
-🧠 Key Features
-🔍 Sensors
-🌡️ DHT22: Measures temperature and humidity.
+This project is a **smart sensor-driven home automation system** built using the **ESP32** and simulated on **Wokwi**.
+It automatically manages home lighting and fan control based on **real-time sensor data** including temperature, light intensity, and motion detection. It also provides **live feedback** on an OLED display and allows **user-defined thresholds via Serial Monitor**.
 
-💡 LDR (Light Dependent Resistor): Detects ambient light levels (analog + digital output).
+---
 
-🚶 PIR Sensor: Senses motion (human presence).
+## 🎯 Project Objectives
 
-⏰ RTC DS1307: Keeps accurate time, even during resets.
+* ⚡ **Automate lights and fan** based on environmental and occupancy data.
+* 🌱 **Conserve energy** by activating devices only when needed.
+* 📟 **Display real-time data** like temperature, humidity, time, and motion status on an OLED.
+* 💾 **Support custom thresholds** with persistence using EEPROM.
 
-⚙️ Actuators
-💡 Relay for Light: Turns on lights if it’s dark and someone is present.
+---
 
-🌬️ Relay for Fan: Activates fan if temperature > threshold and motion is detected.
+## 🧠 Key Features
 
-🔴 Status LED: Glows when low-light is detected (via LDR digital output).
+### 🔍 Sensors
 
-🖥️ User Interface
-📟 OLED Display:
-Shows:
+* 🌡️ **DHT22** – Temperature and humidity sensing
+* 💡 **LDR (Light Dependent Resistor)** – Detects ambient light (analog & digital output)
+* 🚶 **PIR Sensor** – Detects human motion
+* ⏰ **RTC DS1307** – Keeps track of current time (battery-backed)
 
-⏱️ Current Time
+---
 
-🌡️ Temperature & 💧 Humidity
+### ⚙️ Actuators & Indicators
 
-💡 Light Level
+* 💡 **Relay 1 (Light Control)** – Turns on light when room is dark **and** motion is detected
+* 🌬️ **Relay 2 (Fan Control)** – Turns on fan if **temperature > threshold** and motion is detected
+* 🔴 **Status LED** – Lights up if **low-light condition** is detected (LDR digital = LOW)
 
-🚶 Motion Detection Status
+---
 
-🧑‍💻 Serial Interface:
+### 🖥️ User Interface
 
-🛠️ Set custom thresholds for temperature & light.
+#### 📟 **OLED Display (SSD1306)**
 
-💾 Saves settings in EEPROM for persistence across resets.
+Displays:
 
-🧠 System Logic
-💡 Lights turn on only when:
+* 🕒 Current time (via RTC)
+* 🌡️ Temperature & 💧 Humidity
+* 💡 Light level
+* 🚶 Motion detection status
 
-Light level is below threshold
+#### 💬 **Serial Interface**
 
-Motion is detected
+* 📌 Allows setting **custom thresholds** for:
 
-🌬️ Fan turns on when:
+  * Temperature (for fan)
+  * Light intensity (for lights)
+* 💾 Settings are saved in **EEPROM** for persistence across resets
 
-Temperature is above threshold
+---
 
-Motion is detected
+## 🧠 System Logic Flow
 
-🔴 LED glows when light is below threshold (LDR digital LOW)
+### 💡 Light ON Conditions:
 
-📟 OLED shows a live snapshot of:
+* Ambient light below threshold (LDR)
+* Motion detected (PIR)
 
-Sensor readings
+### 🌬️ Fan ON Conditions:
 
-System status
+* Temperature above user-set threshold
+* Motion detected
 
-Current time (RTC-based)
+### 🔴 LED Indicator:
 
-💡 Applications
-This project is perfect for:
+* Turns ON when LDR digital output is LOW (dark environment)
 
-🏠 Smart home enthusiasts
+### 📟 OLED Display Output:
 
-🎓 Students exploring IoT & embedded systems
+* Real-time sensor values
+* Current system status
+* Clock from RTC module
 
-👨‍🔧 Engineers designing intelligent automation systems
+---
 
-It demonstrates:
+## 🧰 Components Used
 
-🌐 IoT integration
+| Component         | Function                       |
+| ----------------- | ------------------------------ |
+| ESP32             | Main microcontroller           |
+| DHT22             | Temperature & humidity sensor  |
+| LDR               | Light level sensor             |
+| PIR Sensor        | Motion detection               |
+| RTC DS1307        | Real-time clock                |
+| OLED SSD1306      | Display for sensor/status data |
+| Relay Module (x2) | Controls light and fan         |
+| EEPROM (internal) | Saves user-defined thresholds  |
 
-🧩 Sensor-actuator fusion
+---
 
-💾 EEPROM storage
+## 💡 Applications
 
-📟 Real-time data display
-All simulated efficiently using Wokwi!
+* 🏠 Home Automation Projects
+* 👨‍💻 IoT & Embedded Systems Learning
+* 🎓 Academic Demonstrations
+* ⚙️ Smart Environment Simulations
 
-🔧 Technologies Used
-🧠 ESP32 Microcontroller
+Demonstrates:
 
-🧪 DHT22, PIR, LDR
+* 🌐 IoT + sensor integration
+* ⚙️ Automated decision-making
+* 💾 Persistent data storage
+* 📟 Real-time user interface
 
-⏰ RTC DS1307
+---
 
-📟 SSD1306 OLED
+## 🔧 Technologies Used
 
-💬 EEPROM & Serial Monitor
+* **ESP32** microcontroller
+* **DHT22**, **PIR**, **LDR** sensors
+* **RTC DS1307** (I²C)
+* **SSD1306 OLED** display
+* **EEPROM** and **Serial Monitor** interaction
+* **Wokwi** simulation platform
 
-🧪 Wokwi Simulator
+---
 
-🚀 Demo & Simulation
-🧪 Click here to run the simulation on Wokwi https://wokwi.com/projects/433739825455756289
+## 🧪 Demo & Simulation
+
+🎮 **Try it Live on Wokwi**:
+🔗 [Click here to open the simulation](https://wokwi.com/projects/433739825455756289)
+
+---
+
+## 📁 Repository Structure
+
+```
+Advanced-Home-Automation/
+├── AdvancedHomeAutomation.ino     # Arduino sketch
+├── README.md                      # Project description
+└── media/                         # Optional images/screenshots
+```
+
+---

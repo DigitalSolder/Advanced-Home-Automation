@@ -1,4 +1,4 @@
-🌟 **Advanced Home Automation System with Environmental Sensing** project:
+🌟 **Advanced Home Automation System with Environmental Sensing**:
 
 ---
 
